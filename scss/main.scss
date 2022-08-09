@@ -1,8 +1,7 @@
-.sass {
-    background-color: hsl(0, 0%, 0%);
-    color: hotpink;
-}
-.container {
-    margin: 0 auto;
-    background-color: azure;
+body {
+    background-color: rgb(33, 33, 33);
+} 
+@font-face {
+    font-family: voxabular-font;
+    src: url("../src/assets/fonts/BohemianTypewriter.ttf");
 }

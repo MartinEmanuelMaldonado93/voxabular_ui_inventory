@@ -5,23 +5,19 @@ const common = require("./webpack.common");
 
 /** @type {import('webpack').Configuration} */
 const DEV_CONFIG = {
-    mode: "development",
-    output: {
-        path: path.join(__dirname, "../dev"),
-    }, 
+    mode: "development", 
     stats: {
         loggingDebug: ["sass-loader"],
     },
     devServer: {
-        port: 9001,
+        port: 9000,
         static: {
             directory: path.join(__dirname, "../dist"),
         },
         open: true,
-        compress:true,
-        hot:true,
+        hot: true,
     },
-    devtool: false,
+    devtool: "eval-source-map",
 };
 
 module.exports = merge(common, DEV_CONFIG);

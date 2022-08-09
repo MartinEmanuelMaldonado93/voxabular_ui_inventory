@@ -1,0 +1,5 @@
+all menu 
+implement dark mode, new pallete's 
+improve canvas script
+
+

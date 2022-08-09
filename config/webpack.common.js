@@ -1,12 +1,11 @@
 const path = require("path");
 const webpack = require("webpack");
 const TerserPlugin = require("terser-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
-    entry: "../src/index.ts",
+    entry: "../src/",
     context: path.resolve(__dirname),
     output: {
         path: path.resolve(__dirname, "../dist"),
@@ -14,7 +13,8 @@ module.exports = {
         filename: "main.js",
         clean: true,
         assetModuleFilename: "[name][ext]",
-    }, 
+        publicPath: "",
+    },
     module: {
         rules: [
             {
@@ -23,50 +23,33 @@ module.exports = {
                 exclude: "/node_modules",
             },
             {
-                test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader,"css-loader",],
-            },
-            {
-                test: /\.s[ac]ss$/i,
-                use: [ 
-                    MiniCssExtractPlugin.loader,
+                test: /\.(css|sass|scss)$/i,
+                use: [
+                    "style-loader",
                     "css-loader",
+                    "sass-loader",
                     {
                         loader: "sass-loader",
                         options: {
                             implementation: require("sass"),
                             sourceMap: true,
                         },
-                    }, 
+                    },
                 ],
             },
             {
-                test: /\.(png|svg|jpg|gif|jpeg)$/i,
-                type: "asset/resource",
+                // test: /\.(png|svg|jpg|gif|jpeg)$/i,
+                test: /\.png$/i,
+                type: "asset",
             },
         ],
     },
+    plugins: [new HtmlWebpackPlugin({ template: "../pages/index.html" })],
     resolve: {
-        extensions: [".js", ".jsx", ".json", ".tsx", ".ts"],
-    },
-    plugins: [
-        new HtmlWebpackPlugin({ template: "../pages/index.html" }),
-        new MiniCssExtractPlugin({
-            filename: "style.css",
-        }),
-    ],
-    devtool: "source-map",
+        extensions: [".js", ".json", ".ts"],
+    }, 
     performance: {
         maxAssetSize: 500_000,
         hints: false,
-    },
-    optimization: {
-        minimize: true,
-        minimizer: [
-            new TerserPlugin({
-                test: /\.js(\?.*)?$/i,
-                exclude: "/node_modules",
-            }),
-        ],
-    },
+    }, 
 };
