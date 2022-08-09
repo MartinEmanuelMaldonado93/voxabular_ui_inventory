@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit';
-import { customElement, property } from 'lit/decorators'
+import { customElement, property } from 'lit/decorators.js'
 
 @customElement('vocabulary-tab')
 export class Vocabulary extends LitElement {
@@ -12,6 +12,6 @@ export class Vocabulary extends LitElement {
     ];
 
     render() {
-        return html``;
+        return html`<h1>vocabulary</h1>`;
     }
 }

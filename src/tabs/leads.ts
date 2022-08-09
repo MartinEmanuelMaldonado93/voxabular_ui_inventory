@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit';
-import { customElement, property } from 'lit/decorators'
+import { customElement, property } from 'lit/decorators.js'
 
 @customElement('leads-tab')
 export class Leads extends LitElement {

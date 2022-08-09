@@ -6,18 +6,22 @@ import backbeige from "../assets/img/beige-paper.png";
 export class ModelSheet extends LitElement {
     static override styles = [
         css`
-            :host {
-                display: block;
-                background: url(${unsafeCSS(backbeige)});
-                border: 1px solid gray;
+            :host { 
+                display: inline-block;
+                border-top: none;
                 border-radius: 4px;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                background: url(${unsafeCSS(backbeige)}), beige;
+                width: 100%;
             }
         `,
     ];
-    @property({type:String})
-    nameid?:string;
+
+    @property({ type: String })
+    nameid?: string;
 
     override render() {
-        return html` <slot></slot> `;
+        return html`<slot></slot>`;
     }
 }

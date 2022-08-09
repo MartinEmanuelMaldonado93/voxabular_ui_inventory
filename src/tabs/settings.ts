@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit';
-import { customElement, property } from 'lit/decorators'
+import { customElement, property } from 'lit/decorators.js'
 
 @customElement('settings-tab')
 export class Settings extends LitElement {
@@ -12,6 +12,6 @@ export class Settings extends LitElement {
     ];
 
     render() {
-        return html``;
+        return html`<h1>settings</h1>`;
     }
 }

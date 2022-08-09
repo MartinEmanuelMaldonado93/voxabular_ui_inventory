@@ -1,53 +1,89 @@
 import { LitElement, html, css, CSSResultGroup, unsafeCSS } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
+import backbeige from "./assets/img/beige-paper.png";
 import "../scss/main.scss";
 import "./tabs/model-sheet";
-import backbeige from "./assets/img/beige-paper.png";
+import "./tabs/tabs-group";
 
+
+//https://coolors.co/palette/220901-621708-941b0c-bc3908-f6aa1c
+//https://coolors.co/palette/335c67-fff3b0-e09f3e-9e2a2b-540b0e
+//https://coolors.co/palette/f2c57c-ddae7e-7fb685-426a5a-ef6f6c
 @customElement("lit-notebook")
 export class LitNotebook extends LitElement {
     static styles?: CSSResultGroup | undefined = [
+         
         css`
+            :root {
+                --dark: #282b28;
+                --dark-green: #3e5641;
+                --dark-brown: #a24936;
+                --dark-orange: #d36135;
+                --dark-lightblue: #83bca9;
+            }
             :host {
                 font-family: voxabular-font;
             }
             button {
-                font-size: 2rem;
-                padding: 0 10px;
                 font-family: voxabular-font;
+                font-size: 1.5rem;
+                padding: 0 10px;
                 background: url(${unsafeCSS(backbeige)});
+                background-color: beige;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+                border: 1px solid lightgray;
+                border-left: none;
+                border-bottom: none;
             }
-            .bloc-tabs {
+            .button-tabs {
                 display: flex;
-                gap: 1px;
+                /* margin-left: px;  */
+            }
+            .button-tabs :not(:first-child) {
+                /* margin-left: -2px; */
+                /* background: red; */
+            }
+            .content-tabs {
+                /* min-height: 400px; */
+            }
+            .tabs {
+                background: url(${unsafeCSS(backbeige)}),#d3d3bb;
+                /* background-color: hsl(80, 5%, 30%); */
+                /* background-color: #d3d3bb03; */
             }
             .active-tabs {
-                background-color: lightblue;
-                box-shadow: 1px 0 4px 2px white;
+                box-shadow: 0px -2px 5px 3px white; /** shine */
                 border: none;
+                transform: scale(1.02);
+                /* border-left: 1px solid gray;
+                border-right: 1px solid gray; */
             }
             .container {
-                background-color: white;
-                height: 70vh;
+                background-color: #282b28;
+                min-height: 500px;
                 width: 90vw;
-                margin: 0 auto;
+                margin: 1rem auto;
+                padding: 5px;
+                border-radius: 8px;
             }
         `,
     ];
 
     @state()
-    toggleState: string = "leads";
+    toggleState: string = "case";
 
     setToggleState(str: string) {
         this.toggleState = str;
     }
+
     override render() {
         return html`
             <div class="container">
-                <div class="bloc-tabs">
+                <div class="button-tabs">
                     <button
                         class=${this.toggleState === "suscribe"
-                            ? "tabs active-tabs"
+                            ? "active-tabs"
                             : "tabs"}
                         @click=${() => this.setToggleState("suscribe")}
                     >
@@ -55,7 +91,7 @@ export class LitNotebook extends LitElement {
                     </button>
                     <button
                         class=${this.toggleState === "case"
-                            ? "tabs active-tabs"
+                            ? " active-tabs"
                             : "tabs"}
                         @click=${() => (this.toggleState = "case")}
                     >
@@ -63,7 +99,7 @@ export class LitNotebook extends LitElement {
                     </button>
                     <button
                         class=${this.toggleState === "leads"
-                            ? "tabs active-tabs"
+                            ? " active-tabs"
                             : "tabs"}
                         @click=${() => this.setToggleState("leads")}
                     >
@@ -71,7 +107,7 @@ export class LitNotebook extends LitElement {
                     </button>
                     <button
                         class=${this.toggleState === "vocabulary"
-                            ? "tabs active-tabs"
+                            ? "active-tabs"
                             : "tabs"}
                         @click=${() => this.setToggleState("vocabulary")}
                     >
@@ -79,7 +115,7 @@ export class LitNotebook extends LitElement {
                     </button>
                     <button
                         class=${this.toggleState === "settings"
-                            ? "tabs active-tabs"
+                            ? "active-tabs"
                             : "tabs"}
                         @click=${() => this.setToggleState("settings")}
                     >
@@ -88,19 +124,27 @@ export class LitNotebook extends LitElement {
                 </div>
                 <div class="content-tabs">
                     ${this.toggleState === "leads"
-                        ? html`<model-sheet>Leads</model-sheet>`
+                        ? html`<model-sheet>
+                              <leads-tab></leads-tab>
+                          </model-sheet>`
                         : ""}
                     ${this.toggleState === "case"
-                        ? html`<model-sheet>Case</model-sheet>`
+                        ? html`<model-sheet><case-tab></case-tab></model-sheet>`
                         : ""}
                     ${this.toggleState === "suscribe"
-                        ? html`<model-sheet>Suscribe</model-sheet>`
+                        ? html`<model-sheet
+                              ><suscribe-tab></suscribe-tab
+                          ></model-sheet>`
                         : ""}
                     ${this.toggleState === "vocabulary"
-                        ? html`<model-sheet>Vocabulary</model-sheet>`
+                        ? html`<model-sheet
+                              ><vocabulary-tab></vocabulary-tab
+                          ></model-sheet>`
                         : ""}
                     ${this.toggleState === "settings"
-                        ? html`<model-sheet>Settings</model-sheet>`
+                        ? html`<model-sheet
+                              ><settings-tab></settings-tab
+                          ></model-sheet>`
                         : ""}
                 </div>
             </div>
