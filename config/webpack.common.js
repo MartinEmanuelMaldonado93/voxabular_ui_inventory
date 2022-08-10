@@ -8,7 +8,7 @@ module.exports = {
     entry: "../src/",
     context: path.resolve(__dirname),
     output: {
-        path: path.resolve(__dirname, "../dist"),
+        path: path.resolve(__dirname, "../docs"),
         // filename: '[name].[contenthash].js',
         filename: "main.js",
         clean: true,
