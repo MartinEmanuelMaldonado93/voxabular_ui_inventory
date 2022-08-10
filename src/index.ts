@@ -3,7 +3,7 @@ import { customElement, property, state } from "lit/decorators.js";
 import backbeige from "./assets/img/beige-paper.png";
 import "../scss/main.scss";
 import "./tabs/model-sheet";
-import "./tabs/tabs-group"; 
+import "./tabs/tabs-group";
 
 //https://coolors.co/palette/220901-621708-941b0c-bc3908-f6aa1c
 //https://coolors.co/palette/335c67-fff3b0-e09f3e-9e2a2b-540b0e
@@ -11,7 +11,6 @@ import "./tabs/tabs-group";
 @customElement("lit-notebook")
 export class LitNotebook extends LitElement {
     static styles?: CSSResultGroup | undefined = [
-         
         css`
             :root {
                 --dark: #282b28;
@@ -47,7 +46,7 @@ export class LitNotebook extends LitElement {
                 /* min-height: 400px; */
             }
             .tabs {
-                background: url(${unsafeCSS(backbeige)}),#d3d3bb;
+                background: url(${unsafeCSS(backbeige)}), #d3d3bb;
                 /* background-color: hsl(80, 5%, 30%); */
                 /* background-color: #d3d3bb03; */
             }
@@ -70,7 +69,7 @@ export class LitNotebook extends LitElement {
     ];
 
     @state()
-    toggleState: string = "vocabulary";
+    toggleState: string = "settings";
 
     setToggleState(str: string) {
         this.toggleState = str;
@@ -96,14 +95,14 @@ export class LitNotebook extends LitElement {
                     >
                         Case
                     </button>
-                    <button
+                    <!-- <button
                         class=${this.toggleState === "leads"
                             ? " active-tabs"
                             : "tabs"}
                         @click=${() => this.setToggleState("leads")}
                     >
                         Leads
-                    </button>
+                    </button> -->
                     <button
                         class=${this.toggleState === "vocabulary"
                             ? "active-tabs"
@@ -122,11 +121,11 @@ export class LitNotebook extends LitElement {
                     </button>
                 </div>
                 <div class="content-tabs">
-                    ${this.toggleState === "leads"
+                    <!-- ${this.toggleState === "leads"
                         ? html`<model-sheet>
                               <leads-tab></leads-tab>
                           </model-sheet>`
-                        : ""}
+                        : ""} --> 
                     ${this.toggleState === "case"
                         ? html`<model-sheet><case-tab></case-tab></model-sheet>`
                         : ""}
