@@ -70,7 +70,7 @@ export class LitNotebook extends LitElement {
     ];
 
     @state()
-    toggleState: string = "suscribe";
+    toggleState: string = "vocabulary";
 
     setToggleState(str: string) {
         this.toggleState = str;

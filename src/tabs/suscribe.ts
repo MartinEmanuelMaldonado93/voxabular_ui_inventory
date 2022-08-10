@@ -17,6 +17,7 @@ export class Suscribe extends LitElement {
                 display: block;
             }
             .input {
+                font-family: voxabular-font;
                 border-radius: 3px;
                 border: none;
                 padding: 5px;

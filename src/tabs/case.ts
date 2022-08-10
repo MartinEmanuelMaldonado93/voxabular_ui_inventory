@@ -10,12 +10,12 @@ export class Case extends LitElement {
                 display: block;
                 min-height: 400px;
             }
-            .case-container{
-                 
+            .case-container {
+                margin-top: 2rem;
             }
             .title-case {
                 color: rgb(230, 20, 20);
-                text-shadow: 3px 2px 1px black;
+                text-shadow: 2px 2px 1px black;
                 text-align: center;
             }
             .li-template {
@@ -24,7 +24,7 @@ export class Case extends LitElement {
             }
             li::before {
                 content: "(X)  ";
-                color: rgb(230, 20, 20);
+                color: rgb(230, 20, 20);// red
             }
             .list-items {
                 text-align: center;
@@ -48,11 +48,8 @@ export class Case extends LitElement {
         return html`
             <div class="case-container">
                 <h1 class="title-case">${this.titleCase}</h1>
-    
                 <div class="list-items">${map(this._todos, li_template)}</div>
             </div>
         `;
     }
 }
-
-// ${this._todos.map(el=>html`<li>${el}</li>`)}
