@@ -3,8 +3,7 @@ import { customElement, property, state } from "lit/decorators.js";
 import backbeige from "./assets/img/beige-paper.png";
 import "../scss/main.scss";
 import "./tabs/model-sheet";
-import "./tabs/tabs-group";
-
+import "./tabs/tabs-group"; 
 
 //https://coolors.co/palette/220901-621708-941b0c-bc3908-f6aa1c
 //https://coolors.co/palette/335c67-fff3b0-e09f3e-9e2a2b-540b0e
@@ -71,7 +70,7 @@ export class LitNotebook extends LitElement {
     ];
 
     @state()
-    toggleState: string = "case";
+    toggleState: string = "suscribe";
 
     setToggleState(str: string) {
         this.toggleState = str;

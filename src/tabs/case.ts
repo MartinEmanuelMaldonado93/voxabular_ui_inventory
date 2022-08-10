@@ -5,17 +5,20 @@ import { map } from "lit/directives/map.js";
 @customElement("case-tab")
 export class Case extends LitElement {
     static styles = [
-        css` 
+        css`
             :host {
                 display: block;
                 min-height: 400px;
+            }
+            .case-container{
+                 
             }
             .title-case {
                 color: rgb(230, 20, 20);
                 text-shadow: 3px 2px 1px black;
                 text-align: center;
             }
-            .li-template{
+            .li-template {
                 font-size: 1.5rem;
                 list-style: none;
             }
@@ -24,9 +27,7 @@ export class Case extends LitElement {
                 color: rgb(230, 20, 20);
             }
             .list-items {
-                border:1px solid gray;
                 text-align: center;
-                
             }
         `,
     ];
@@ -41,12 +42,15 @@ export class Case extends LitElement {
     ];
 
     render() {
-        const li_template = (el: string) => html`<li class="li-template">${el}</li>`;
+        const li_template = (el: string) =>
+            html`<li class="li-template">${el}</li>`;
 
         return html`
-            <h1 class="title-case">${this.titleCase}</h1>
-
-            <div class="list-items">${map(this._todos, li_template)}</div>
+            <div class="case-container">
+                <h1 class="title-case">${this.titleCase}</h1>
+    
+                <div class="list-items">${map(this._todos, li_template)}</div>
+            </div>
         `;
     }
 }
