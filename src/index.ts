@@ -8,6 +8,14 @@ import "./tabs/tabs-group";
 //https://coolors.co/palette/220901-621708-941b0c-bc3908-f6aa1c
 //https://coolors.co/palette/335c67-fff3b0-e09f3e-9e2a2b-540b0e
 //https://coolors.co/palette/f2c57c-ddae7e-7fb685-426a5a-ef6f6c
+const tabs = {
+    case: "case",
+    vocabulary: "vocabulary",
+    suscribe: "suscribe",
+    settings: "settings",
+    leads: "leads"
+};
+
 @customElement("lit-notebook")
 export class LitNotebook extends LitElement {
     static styles?: CSSResultGroup | undefined = [
@@ -69,7 +77,7 @@ export class LitNotebook extends LitElement {
     ];
 
     @state()
-    toggleState: string = "settings";
+    toggleState: string = tabs.vocabulary;
 
     setToggleState(str: string) {
         this.toggleState = str;
@@ -97,8 +105,8 @@ export class LitNotebook extends LitElement {
                     </button>
                     <!-- <button
                         class=${this.toggleState === "leads"
-                            ? " active-tabs"
-                            : "tabs"}
+                        ? " active-tabs"
+                        : "tabs"}
                         @click=${() => this.setToggleState("leads")}
                     >
                         Leads
@@ -125,7 +133,7 @@ export class LitNotebook extends LitElement {
                         ? html`<model-sheet>
                               <leads-tab></leads-tab>
                           </model-sheet>`
-                        : ""} --> 
+                        : ""} -->
                     ${this.toggleState === "case"
                         ? html`<model-sheet><case-tab></case-tab></model-sheet>`
                         : ""}

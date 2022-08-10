@@ -13,6 +13,8 @@ export class Vocabulary extends LitElement {
             h1 {
                 color: rgb(230, 20, 20);
                 text-shadow: 2px 2px 1px black;
+                margin: 0;
+                margin-top: 1rem;
             }
             li {
                 list-style: none;
@@ -37,29 +39,29 @@ export class Vocabulary extends LitElement {
                 box-shadow: 0 3px 4px 2px gray;
                 transform: rotateZ(-10deg);
             }
-            .card:hover{transform: scale(1.1);}
+            .card:hover {
+                transform: scale(1.1);
+                z-index: 3;
+            }
             .c-1 {
                 transform: rotateZ(-20deg) translateY(-20px);
             }
             .c-2 {
-                transform: rotateZ(-10deg); 
-                filter:sepia(120%);
+                transform: rotateZ(-10deg);
+                filter: sepia(120%);
             }
             .c-3 {
-                transform: rotateZ(10deg); 
+                transform: rotateZ(10deg) translateX(40px);
+            }
+            .rotation {
+            }
 
-            }
-            .rotation {  
-            }
-            .zindex {
-                z-index: 2;
-            }
             .card__p {
                 border-bottom: 2px solid gray;
             }
             .card__img {
                 width: 95%;
-            } 
+            }
         `,
     ];
 
@@ -72,9 +74,7 @@ export class Vocabulary extends LitElement {
     ];
     @state()
     rotation = false;
-    @state()
-    zindex = false;
-    
+
     render() {
         const li_template = (el: string) =>
             html`<li class="li-template">${el}</li>`;
@@ -84,8 +84,10 @@ export class Vocabulary extends LitElement {
                 <h1>A Countryside Drive</h1>
                 <div class="list-items">${map(this._todos, li_template)}</div>
                 <div class="card-container">
-                    <div @click=${()=>this.rotation=!this.rotation} 
-                    class="card c-1 ${this.rotation? "rotation":""}">
+                    <div
+                        @click=${() => (this.rotation = !this.rotation)}
+                        class="card c-1 ${this.rotation ? "rotation" : ""}"
+                    >
                         <img class="card__img" src=${vox} />
                         <p class="card__p">Exit the car</p>
                         <span class="card__footer">
@@ -93,18 +95,23 @@ export class Vocabulary extends LitElement {
                             <p>Expression</p>
                         </span>
                     </div>
-                    <div @click=${()=>this.rotation=!this.rotation} 
-                    class="card c-2 ${this.rotation? "rotation":""}">
+                    <div
+                        @click=${() => (this.rotation = !this.rotation)}
+                        class="card c-2 ${this.rotation ? "rotation" : ""}"
+                    >
                         <img class="card__img" src=${vox} />
-                        <p class="card__p">Exit the car</p>
+                        <p class="card__p">Stop the bus</p>
                         <span class="card__footer">
                             <!-- icon -->
                             <p>Expression</p>
                         </span>
                     </div>
-                    <div @click=${()=>this.rotation=!this.rotation} class="card c-3 ">
+                    <div
+                        @click=${() => (this.rotation = !this.rotation)}
+                        class="card c-3 "
+                    >
                         <img class="card__img" src=${vox} />
-                        <p class="card__p">Exit the car</p>
+                        <p class="card__p">Please help !!!</p>
                         <span class="card__footer">
                             <!-- icon -->
                             <p>Expression</p>

@@ -58,7 +58,7 @@
             :host {
                 display: block;
             }
-        `],$=function(t,e,r,o){var n,a=arguments.length,i=a<3?e:null===o?o=Object.getOwnPropertyDescriptor(e,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)i=Reflect.decorate(t,e,r,o);else for(var s=t.length-1;s>=0;s--)(n=t[s])&&(i=(a<3?n(i):a>3?n(e,r,i):n(e,r))||i);return a>3&&i&&Object.defineProperty(e,r,i),i}([(0,n.Mo)("leads-tab")],$);const O=r.p+"hints.png";var S=function(t,e,r,o){var n,a=arguments.length,i=a<3?e:null===o?o=Object.getOwnPropertyDescriptor(e,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)i=Reflect.decorate(t,e,r,o);else for(var s=t.length-1;s>=0;s--)(n=t[s])&&(i=(a<3?n(i):a>3?n(e,r,i):n(e,r))||i);return a>3&&i&&Object.defineProperty(e,r,i),i};let B=class extends o.oi{constructor(){super(...arguments),this.userid=+new Date}render(){return o.dy`
+        `],$=function(t,e,r,o){var n,a=arguments.length,i=a<3?e:null===o?o=Object.getOwnPropertyDescriptor(e,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)i=Reflect.decorate(t,e,r,o);else for(var s=t.length-1;s>=0;s--)(n=t[s])&&(i=(a<3?n(i):a>3?n(e,r,i):n(e,r))||i);return a>3&&i&&Object.defineProperty(e,r,i),i}([(0,n.Mo)("leads-tab")],$);const O=r.p+"hints.png";var S=function(t,e,r,o){var n,a=arguments.length,i=a<3?e:null===o?o=Object.getOwnPropertyDescriptor(e,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)i=Reflect.decorate(t,e,r,o);else for(var s=t.length-1;s>=0;s--)(n=t[s])&&(i=(a<3?n(i):a>3?n(e,r,i):n(e,r))||i);return a>3&&i&&Object.defineProperty(e,r,i),i};let I=class extends o.oi{constructor(){super(...arguments),this.userid=+new Date}render(){return o.dy`
             <div class="settings-container">
                 <h2>Change language</h2>
                 <div class="buttons-container">
@@ -83,7 +83,7 @@
                     <button class="erase">Erase and Restart</button>
                 </div>
             </div>
-        `}};B.styles=[o.iv`
+        `}};I.styles=[o.iv`
             :host {
                 display: block;
             }
@@ -138,7 +138,7 @@
                 height: 5px;
                 background-color: black;
             }
-        `],S([(0,n.Cb)()],B.prototype,"userid",void 0),B=S([(0,n.Mo)("settings-tab")],B);let I=class extends o.oi{render(){return o.dy`
+        `],S([(0,n.Cb)()],I.prototype,"userid",void 0),I=S([(0,n.Mo)("settings-tab")],I);let B=class extends o.oi{render(){return o.dy`
             <div class="suscribe-container">
                 <h1>Thank you for suscribe!🖤</h1>
                 <div class="contact">
@@ -156,7 +156,7 @@
                     <a>Manage my subscription</a>
                 </div>
             </div>
-        `}};I.styles=[o.iv`
+        `}};B.styles=[o.iv`
             :host {
                 display: block;
                 font-size: 1.2rem;
@@ -197,13 +197,15 @@
             .anchors {
                 margin-top: 4rem;
             }
-        `],I=function(t,e,r,o){var n,a=arguments.length,i=a<3?e:null===o?o=Object.getOwnPropertyDescriptor(e,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)i=Reflect.decorate(t,e,r,o);else for(var s=t.length-1;s>=0;s--)(n=t[s])&&(i=(a<3?n(i):a>3?n(e,r,i):n(e,r))||i);return a>3&&i&&Object.defineProperty(e,r,i),i}([(0,n.Mo)("suscribe-tab")],I);const j=r.p+"vox.png";var _=function(t,e,r,o){var n,a=arguments.length,i=a<3?e:null===o?o=Object.getOwnPropertyDescriptor(e,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)i=Reflect.decorate(t,e,r,o);else for(var s=t.length-1;s>=0;s--)(n=t[s])&&(i=(a<3?n(i):a>3?n(e,r,i):n(e,r))||i);return a>3&&i&&Object.defineProperty(e,r,i),i};let R=class extends o.oi{constructor(){super(...arguments),this._todos=["Excellent","Good","Miss","Hints","Study words used"],this.rotation=!1,this.zindex=!1}render(){return o.dy`
+        `],B=function(t,e,r,o){var n,a=arguments.length,i=a<3?e:null===o?o=Object.getOwnPropertyDescriptor(e,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)i=Reflect.decorate(t,e,r,o);else for(var s=t.length-1;s>=0;s--)(n=t[s])&&(i=(a<3?n(i):a>3?n(e,r,i):n(e,r))||i);return a>3&&i&&Object.defineProperty(e,r,i),i}([(0,n.Mo)("suscribe-tab")],B);const j=r.p+"vox.png";var _=function(t,e,r,o){var n,a=arguments.length,i=a<3?e:null===o?o=Object.getOwnPropertyDescriptor(e,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)i=Reflect.decorate(t,e,r,o);else for(var s=t.length-1;s>=0;s--)(n=t[s])&&(i=(a<3?n(i):a>3?n(e,r,i):n(e,r))||i);return a>3&&i&&Object.defineProperty(e,r,i),i};let R=class extends o.oi{constructor(){super(...arguments),this._todos=["Excellent","Good","Miss","Hints","Study words used"],this.rotation=!1}render(){return o.dy`
             <div class="vocabulary-container">
                 <h1>A Countryside Drive</h1>
                 <div class="list-items">${(0,k.U)(this._todos,(t=>o.dy`<li class="li-template">${t}</li>`))}</div>
                 <div class="card-container">
-                    <div @click=${()=>this.rotation=!this.rotation} 
-                    class="card c-1 ${this.rotation?"rotation":""}">
+                    <div
+                        @click=${()=>this.rotation=!this.rotation}
+                        class="card c-1 ${this.rotation?"rotation":""}"
+                    >
                         <img class="card__img" src=${j} />
                         <p class="card__p">Exit the car</p>
                         <span class="card__footer">
@@ -211,18 +213,23 @@
                             <p>Expression</p>
                         </span>
                     </div>
-                    <div @click=${()=>this.rotation=!this.rotation} 
-                    class="card c-2 ${this.rotation?"rotation":""}">
+                    <div
+                        @click=${()=>this.rotation=!this.rotation}
+                        class="card c-2 ${this.rotation?"rotation":""}"
+                    >
                         <img class="card__img" src=${j} />
-                        <p class="card__p">Exit the car</p>
+                        <p class="card__p">Stop the bus</p>
                         <span class="card__footer">
                             <!-- icon -->
                             <p>Expression</p>
                         </span>
                     </div>
-                    <div @click=${()=>this.rotation=!this.rotation} class="card c-3 ">
+                    <div
+                        @click=${()=>this.rotation=!this.rotation}
+                        class="card c-3 "
+                    >
                         <img class="card__img" src=${j} />
-                        <p class="card__p">Exit the car</p>
+                        <p class="card__p">Please help !!!</p>
                         <span class="card__footer">
                             <!-- icon -->
                             <p>Expression</p>
@@ -237,6 +244,8 @@
             h1 {
                 color: rgb(230, 20, 20);
                 text-shadow: 2px 2px 1px black;
+                margin: 0;
+                margin-top: 1rem;
             }
             li {
                 list-style: none;
@@ -261,30 +270,30 @@
                 box-shadow: 0 3px 4px 2px gray;
                 transform: rotateZ(-10deg);
             }
-            .card:hover{transform: scale(1.1);}
+            .card:hover {
+                transform: scale(1.1);
+                z-index: 3;
+            }
             .c-1 {
                 transform: rotateZ(-20deg) translateY(-20px);
             }
             .c-2 {
-                transform: rotateZ(-10deg); 
-                filter:sepia(120%);
+                transform: rotateZ(-10deg);
+                filter: sepia(120%);
             }
             .c-3 {
-                transform: rotateZ(10deg); 
+                transform: rotateZ(10deg) translateX(40px);
+            }
+            .rotation {
+            }
 
-            }
-            .rotation {  
-            }
-            .zindex {
-                z-index: 2;
-            }
             .card__p {
                 border-bottom: 2px solid gray;
             }
             .card__img {
                 width: 95%;
-            } 
-        `],_([(0,n.SB)()],R.prototype,"rotation",void 0),_([(0,n.SB)()],R.prototype,"zindex",void 0),R=_([(0,n.Mo)("vocabulary-tab")],R);var P=function(t,e,r,o){var n,a=arguments.length,i=a<3?e:null===o?o=Object.getOwnPropertyDescriptor(e,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)i=Reflect.decorate(t,e,r,o);else for(var s=t.length-1;s>=0;s--)(n=t[s])&&(i=(a<3?n(i):a>3?n(e,r,i):n(e,r))||i);return a>3&&i&&Object.defineProperty(e,r,i),i};let z=class extends o.oi{constructor(){super(...arguments),this.toggleState="settings"}setToggleState(t){this.toggleState=t}render(){return o.dy`
+            }
+        `],_([(0,n.SB)()],R.prototype,"rotation",void 0),R=_([(0,n.Mo)("vocabulary-tab")],R);var P=function(t,e,r,o){var n,a=arguments.length,i=a<3?e:null===o?o=Object.getOwnPropertyDescriptor(e,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)i=Reflect.decorate(t,e,r,o);else for(var s=t.length-1;s>=0;s--)(n=t[s])&&(i=(a<3?n(i):a>3?n(e,r,i):n(e,r))||i);return a>3&&i&&Object.defineProperty(e,r,i),i};let E=class extends o.oi{constructor(){super(...arguments),this.toggleState="vocabulary"}setToggleState(t){this.toggleState=t}render(){return o.dy`
             <div class="container">
                 <div class="button-tabs">
                     <button
@@ -321,7 +330,7 @@
                 <div class="content-tabs">
                     <!-- ${"leads"===this.toggleState?o.dy`<model-sheet>
                               <leads-tab></leads-tab>
-                          </model-sheet>`:""} --> 
+                          </model-sheet>`:""} -->
                     ${"case"===this.toggleState?o.dy`<model-sheet><case-tab></case-tab></model-sheet>`:""}
                     ${"suscribe"===this.toggleState?o.dy`<model-sheet
                               ><suscribe-tab></suscribe-tab
@@ -334,7 +343,7 @@
                           ></model-sheet>`:""}
                 </div>
             </div>
-        `}};z.styles=[o.iv`
+        `}};E.styles=[o.iv`
             :root {
                 --dark: #282b28;
                 --dark-green: #3e5641;
@@ -388,5 +397,5 @@
                 padding: 5px;
                 border-radius: 8px;
             }
-        `],P([(0,n.SB)()],z.prototype,"toggleState",void 0),z=P([(0,n.Mo)("lit-notebook")],z)},167:(t,e,r)=>{t.exports=r.p+"BohemianTypewriter.ttf"}},r={};function o(t){var n=r[t];if(void 0!==n)return n.exports;var a=r[t]={id:t,exports:{}};return e[t](a,a.exports,o),a.exports}o.m=e,t=[],o.O=(e,r,n,a)=>{if(!r){var i=1/0;for(d=0;d<t.length;d++){for(var[r,n,a]=t[d],s=!0,l=0;l<r.length;l++)(!1&a||i>=a)&&Object.keys(o.O).every((t=>o.O[t](r[l])))?r.splice(l--,1):(s=!1,a<i&&(i=a));if(s){t.splice(d--,1);var c=n();void 0!==c&&(e=c)}}return e}a=a||0;for(var d=t.length;d>0&&t[d-1][2]>a;d--)t[d]=t[d-1];t[d]=[r,n,a]},o.n=t=>{var e=t&&t.__esModule?()=>t.default:()=>t;return o.d(e,{a:e}),e},o.d=(t,e)=>{for(var r in e)o.o(e,r)&&!o.o(t,r)&&Object.defineProperty(t,r,{enumerable:!0,get:e[r]})},o.o=(t,e)=>Object.prototype.hasOwnProperty.call(t,e),o.p="",(()=>{o.b=document.baseURI||self.location.href;var t={179:0};o.O.j=e=>0===t[e];var e=(e,r)=>{var n,a,[i,s,l]=r,c=0;if(i.some((e=>0!==t[e]))){for(n in s)o.o(s,n)&&(o.m[n]=s[n]);if(l)var d=l(o)}for(e&&e(r);c<i.length;c++)a=i[c],o.o(t,a)&&t[a]&&t[a][0](),t[a]=0;return o.O(d)},r=self.webpackChunk=self.webpackChunk||[];r.forEach(e.bind(null,0)),r.push=e.bind(null,r.push.bind(r))})(),o.nc=void 0;var n=o.O(void 0,[762],(()=>o(644)));n=o.O(n)})();
-//# sourceMappingURL=main.3846affc34dc5cbe8cd2.js.map
+        `],P([(0,n.SB)()],E.prototype,"toggleState",void 0),E=P([(0,n.Mo)("lit-notebook")],E)},167:(t,e,r)=>{t.exports=r.p+"BohemianTypewriter.ttf"}},r={};function o(t){var n=r[t];if(void 0!==n)return n.exports;var a=r[t]={id:t,exports:{}};return e[t](a,a.exports,o),a.exports}o.m=e,t=[],o.O=(e,r,n,a)=>{if(!r){var i=1/0;for(d=0;d<t.length;d++){for(var[r,n,a]=t[d],s=!0,l=0;l<r.length;l++)(!1&a||i>=a)&&Object.keys(o.O).every((t=>o.O[t](r[l])))?r.splice(l--,1):(s=!1,a<i&&(i=a));if(s){t.splice(d--,1);var c=n();void 0!==c&&(e=c)}}return e}a=a||0;for(var d=t.length;d>0&&t[d-1][2]>a;d--)t[d]=t[d-1];t[d]=[r,n,a]},o.n=t=>{var e=t&&t.__esModule?()=>t.default:()=>t;return o.d(e,{a:e}),e},o.d=(t,e)=>{for(var r in e)o.o(e,r)&&!o.o(t,r)&&Object.defineProperty(t,r,{enumerable:!0,get:e[r]})},o.o=(t,e)=>Object.prototype.hasOwnProperty.call(t,e),o.p="",(()=>{o.b=document.baseURI||self.location.href;var t={179:0};o.O.j=e=>0===t[e];var e=(e,r)=>{var n,a,[i,s,l]=r,c=0;if(i.some((e=>0!==t[e]))){for(n in s)o.o(s,n)&&(o.m[n]=s[n]);if(l)var d=l(o)}for(e&&e(r);c<i.length;c++)a=i[c],o.o(t,a)&&t[a]&&t[a][0](),t[a]=0;return o.O(d)},r=self.webpackChunk=self.webpackChunk||[];r.forEach(e.bind(null,0)),r.push=e.bind(null,r.push.bind(r))})(),o.nc=void 0;var n=o.O(void 0,[762],(()=>o(644)));n=o.O(n)})();
+//# sourceMappingURL=main.cbd6f3a3fe0b7ff71e26.js.map
