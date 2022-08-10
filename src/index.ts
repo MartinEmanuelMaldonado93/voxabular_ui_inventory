@@ -44,7 +44,7 @@ export class LitNotebook extends LitElement {
             }
             .button-tabs {
                 display: flex;
-                /* margin-left: px;  */
+                flex-wrap: wrap;
             }
             .button-tabs :not(:first-child) {
                 /* margin-left: -2px; */
