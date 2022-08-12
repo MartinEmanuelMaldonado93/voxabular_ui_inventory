@@ -40,8 +40,7 @@ export class Suscribe extends LitElement {
                 border: none;
                 text-decoration: none;
                 box-shadow: 0px 0px 8px 6px orange; 
-            }
-
+            } 
             .anchors {
                 margin-top: 4rem;
             }
