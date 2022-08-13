@@ -1,76 +1,47 @@
-import { LitElement, html, CSSResultGroup, unsafeCSS } from "lit";
-import { customElement, property, state } from "lit/decorators.js";
-import "../scss/main.scss";
+import { LitElement, html, CSSResultGroup, css, unsafeCSS } from "lit";
+import { customElement, property, query, state } from "lit/decorators.js";
+import "../scss/main.scss"; /* Global styles */
+import { style } from "./indexCss";
 import "./tabs/model-sheet";
 import "./tabs/tabs-group";
-import { indexCss } from "./indexCss";
 
-type tabType = "case" | "vocabulary" | "suscribe" | "settings" | "leads";
-
-const tabTemplate = {
+/* You can order the tabs from here */
+const tabTemplates = {
   case: html`<case-tab></case-tab>`,
   vocabulary: html`<vocabulary-tab></vocabulary-tab> `,
-  suscribe: html`<suscribe-tab></suscribe-tab>`,
   settings: html`<settings-tab></settings-tab> `,
   leads: html`<leads-tab></leads-tab>`,
+  suscribe: html`<suscribe-tab></suscribe-tab>`,
 };
+/* Array of tab names */
+const nameTabs = Object.keys(tabTemplates) as tabType[];
+type tabType = "case" | "vocabulary" | "suscribe" | "settings" | "leads";
 
 @customElement("lit-notebook")
 export class LitNotebook extends LitElement {
-  static styles?: CSSResultGroup | undefined = [indexCss];
+  static override styles: CSSResultGroup | undefined = [style];
 
   @state()
-  tabState: tabType = "case";
+  tabSelected: tabType = "vocabulary";
 
   setTabState(tab: tabType) {
-    this.tabState = tab;
+    this.tabSelected = tab;
   }
 
   override render() {
+    const toTemplateBtns = (t: tabType) =>
+      html`<button
+        class=${this.tabSelected === t ? "active-tabs" : "tabs"}
+        @click=${() => this.setTabState(t)}
+      >
+        ${t}
+      </button>`;
+
     return html`
       <div class="container">
-        <div class="button-tabs">
-          <button
-            class=${this.tabState === "suscribe" ? "active-tabs" : "tabs"}
-            @click=${() => this.setTabState("suscribe")}
-          >
-            Suscribe
-          </button>
-          <button
-            class=${this.tabState === "case" ? "active-tabs" : "tabs"}
-            @click=${() => this.setTabState("case")} >
-            Case
-          </button>
-          <!-- <button
-                        class=${this.tabState === "leads"
-            ? " active-tabs"
-            : "tabs"}
-                        @click=${() => this.setTabState("leads")}
-                    >
-                        Leads
-                    </button> -->
-          <button
-            class=${this.tabState === "vocabulary"
-              ? "active-tabs"
-              : "tabs"}
-            @click=${() => this.setTabState("vocabulary")}
-          >
-            Vocabulary
-          </button>
-          <button
-            class=${this.tabState === "settings" ? "active-tabs" : "tabs"}
-            @click=${() => this.setTabState("settings")}
-          >
-            Settings
-          </button>
-        </div>
-        
-        <div class="content-tabs">
-            <model-sheet> 
-                ${tabTemplate[this.tabState]} 
-            </model-sheet>
-        </div>
+        <div class="button-tabs">${nameTabs.map(toTemplateBtns)}</div>
 
+        <model-sheet> ${tabTemplates[this.tabSelected]} </model-sheet>
       </div>
     `;
   }
