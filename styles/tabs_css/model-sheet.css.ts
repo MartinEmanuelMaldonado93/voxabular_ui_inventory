@@ -1,7 +1,6 @@
-import { css, unsafeCSS } from "lit";
-import backbeige from "../assets/img/beige-paper.png";
+import { css } from "lit";
 
-export const style = css`
+export default css`
   :host {
     display: flex;
     place-content: center;
@@ -9,7 +8,7 @@ export const style = css`
     border-radius: 4px;
     border-top-left-radius: 0;
     border-top-right-radius: 4px;
-    background: url(${unsafeCSS(backbeige)}), beige;
+    background: url("../assets/img/beige-paper.png"), beige;
     width: 100%;
     height: 80vh;
   }

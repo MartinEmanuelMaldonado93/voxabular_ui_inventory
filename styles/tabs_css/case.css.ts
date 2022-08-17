@@ -1,6 +1,6 @@
 import { css } from "lit";
 
-export const style = css`
+export default css`
   :host {
     display: block;
     min-height: 400px;

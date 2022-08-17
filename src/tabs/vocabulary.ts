@@ -1,12 +1,8 @@
-import { LitElement, html, css, CSSResultGroup } from "lit";
-import {
-  customElement, 
-  property,
-  state,
-} from "lit/decorators.js";
+import { LitElement, html, CSSResultGroup } from "lit";
+import { customElement, property, state } from "lit/decorators.js";
 import { map } from "lit/directives/map.js";
-import vox from "../assets/img/vox.png";
-import { style } from "./vocabularyCss";
+import vox from "../../styles/assets/img/vox.png";
+import style from "../../styles/tabs_css/vocabulary.css";
 
 @customElement("vocabulary-tab")
 export class Vocabulary extends LitElement {
@@ -36,12 +32,12 @@ export class Vocabulary extends LitElement {
 
 @customElement("card-element")
 class CardElement extends LitElement {
-  static styles?: CSSResultGroup | undefined = [style]; 
+  static styles?: CSSResultGroup | undefined = [style];
   @state()
   rotation: boolean = false;
 
   @property()
-  titlecard:string = "";
+  titlecard: string = "";
 
   override render() {
     return html`
@@ -58,14 +54,3 @@ class CardElement extends LitElement {
     `;
   }
 }
-
-/**<div
-            class="card c-1 ${this.rotation ? "rotation" : ""}"
-            @click=${() => (this.rotation = !this.rotation)}
-          >
-            <img class="card__img" src=${vox} />
-            <div class="card__footer">
-              <p class="card__footer-p">Exit the car</p>
-              <p class="card__footer-p">Expression</p>
-            </div>
-          </div> */

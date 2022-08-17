@@ -1,7 +1,7 @@
-import { LitElement, html, css, unsafeCSS } from "lit";
-import { customElement, property, query } from "lit/decorators.js";
-import hints from "../assets/img/hints.png";
-import { style } from "./settingsCss";
+import { LitElement, html  } from "lit";
+import { customElement, property  } from "lit/decorators.js";
+import hints from "../../styles/assets/img/hints.png";
+import style from "../../styles/tabs_css/settings.css";
 
 @customElement("settings-tab")
 export class Settings extends LitElement {

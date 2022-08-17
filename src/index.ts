@@ -1,9 +1,9 @@
 import { LitElement, html, CSSResultGroup, css, unsafeCSS } from "lit";
 import { customElement, property, query, state } from "lit/decorators.js";
-import "../scss/main.scss"; /* Global styles */
-import { style } from "./indexCss";
+import "../styles/main.css"; /* Global styles */
+import  style  from "../styles/tabs_css/index.css";
 import "./tabs/model-sheet";
-import "./tabs/tabs-group";
+import "./tabs/_tabs-group";
 
 /* You can order the tabs from here */
 const tabTemplates = {
@@ -12,9 +12,9 @@ const tabTemplates = {
   settings: html`<settings-tab></settings-tab> `,
   leads: html`<leads-tab></leads-tab>`,
   suscribe: html`<suscribe-tab></suscribe-tab>`,
-};
-/* Array of tab names */
-const nameTabs = Object.keys(tabTemplates) as tabType[];
+}; 
+const nameTabs = Object.keys(tabTemplates) as tabType[]; /* Array of tab names */
+
 type tabType = "case" | "vocabulary" | "suscribe" | "settings" | "leads";
 
 @customElement("lit-notebook")
@@ -32,8 +32,7 @@ export class LitNotebook extends LitElement {
     const toTemplateBtns = (t: tabType) =>
       html`<button
         class=${this.tabSelected === t ? "active-tabs" : "tabs"}
-        @click=${() => this.setTabState(t)}
-      >
+        @click=${() => this.setTabState(t)} >
         ${t}
       </button>`;
 

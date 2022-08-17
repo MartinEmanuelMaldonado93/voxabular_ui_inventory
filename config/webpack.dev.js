@@ -14,7 +14,7 @@ const DEV_CONFIG = {
         static: {
             directory: path.join(__dirname, "../dist"),
         },
-        open: true,
+        open: false,
         hot: true,
     },
     devtool: "eval-source-map",
