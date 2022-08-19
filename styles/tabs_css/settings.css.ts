@@ -16,7 +16,7 @@ export default css`
   }
   .settings__user {
     align-self: center;
-    font-size: var(--small);
+    font-size: var(--small);  
   }
   .settings__buttons-container {
     /* border: 1px solid red; */
@@ -40,15 +40,14 @@ export default css`
     box-shadow: 0 0px 4px 4px white;
     transform: translateY(1px);
   }
-
-  .settings__hints {
-    /* border: 1px solid red; */
+  .settings__hints{
     position: absolute;
-    z-index: 2;
-    width: 10rem;
-    left: 2vmin;
-    top: 20vmax;
-    transform: rotateZ(-100deg);
+    z-index: 2; 
+    height: 0;
+  }
+  .settings__hints-img {
+    max-width: 15rem;
+    transform:  translateX(-14rem) rotateZ(-100deg);
   }
   .settings__volume {
     align-self: center;

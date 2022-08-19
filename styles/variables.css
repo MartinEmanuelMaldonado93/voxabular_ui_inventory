@@ -15,9 +15,3 @@
   --small:  clamp(0.2rem, 1.5vw, 3rem);
   --extra-small: 0.7rem;
 }
-
-@media screen and (min-height: 380px) {
-  :root {
-    --large: 2rem;
-  }
-}

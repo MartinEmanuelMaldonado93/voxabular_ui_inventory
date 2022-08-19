@@ -22,7 +22,7 @@ export class LitNotebook extends LitElement {
   static override styles: CSSResultGroup | undefined = [style];
 
   @state()
-  tabSelected: tabType = "case";
+  tabSelected: tabType = "settings";
 
   setTabState(tab: tabType) {
     this.tabSelected = tab;

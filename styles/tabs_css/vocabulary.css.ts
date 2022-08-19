@@ -67,7 +67,7 @@ export default css`
     transform: rotateZ(-10deg);
   }
   .card:hover {
-    transform: scale(1.2);
+    transform: scale(1.5);
     z-index: 5;
   }
   .card__img { 

@@ -21,7 +21,9 @@ export class Settings extends LitElement {
           <button>I just want to play in English</button>
         </div>
         <div class="settings__user">User:${this.userid}</div>
-        <img class="settings__hints" src=${hints} />
+        <span class="settings__hints">
+          <img class="settings__hints-img" src=${hints} />
+        </span>
         <div class="settings__volume">
           <div>Music Volume</div>
           <input class="range" id="range" type="range" min="1" max="100" />
