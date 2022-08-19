@@ -1,0 +1,23 @@
+:root {
+  /* palette */
+  --dark: #282b28;
+  --dark-green: #3e5641;
+  --dark-brown: #a24936;
+  --dark-orange: #d36135;
+  --dark-lightblue: #83bca9;
+
+  --danger: rgb(230, 20, 20);
+  --alert: tomato;
+
+  --large: clamp(2rem, 4vw , 8rem);
+  --large-medium: clamp(1rem, 2vw, 4rem);
+  --medium: clamp(0.5rem, 1.7vw, 3rem);
+  --small:  clamp(0.2rem, 1.5vw, 3rem);
+  --extra-small: 0.7rem;
+}
+
+@media screen and (min-height: 380px) {
+  :root {
+    --large: 2rem;
+  }
+}

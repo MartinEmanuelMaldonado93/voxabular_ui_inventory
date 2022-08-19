@@ -1,20 +1,23 @@
 import { css } from "lit";
+import "../variables.css";
 
 export default css`
-  :host {
-    display: block;
-    min-height: 400px;
-  }
+  @import url("../variables.css");
+   
   .case-container {
-    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    height: 100%;
   }
-  .title-case {
-    color: rgb(230, 20, 20);
+  .case__title {
+    color: var(--danger);
+    font-size: var(--large);
     text-shadow: 2px 2px 1px black;
     text-align: center;
   }
-  .li-template {
-    font-size: 1.5rem;
+  .case__list {
+    font-size: var(--large-medium);
     list-style: none;
   }
   li::before {

@@ -18,9 +18,11 @@ export class Vocabulary extends LitElement {
 
     return html`
       <div class="vocabulary-container">
-        <h1>A Countryside Drive</h1>
-        <div class="list-items">${map(this._todos, toLiTemplate)}</div>
-        <div class="card-container">
+        <div class="vocabulary__sign">
+          <h1>A Countryside Drive</h1>
+          <div class="list-items">${map(this._todos, toLiTemplate)}</div>
+        </div>
+        <div class="vocabulary__cards-container">
           <card-element class="c-1" titlecard="Exit the car"></card-element>
           <card-element class="c-2" titlecard="Stop the bus"></card-element>
           <card-element class="c-3" titlecard="Please Help!!!"></card-element>
@@ -47,8 +49,8 @@ class CardElement extends LitElement {
       >
         <img class="card__img" src=${vox} />
         <div class="card__footer">
-          <p class="card__footer-p">${this.titlecard}</p>
-          <p class="card__footer-p">Expression</p>
+          <p class="card__footer-title">${this.titlecard}</p>
+          <p class="card__footer-expresion">Expression</p>
         </div>
       </div>
     `;

@@ -3,6 +3,10 @@
 @font-face {
   font-family: voxabular-font;
   src: url("./assets/fonts/BohemianTypewriter.ttf");
+} 
+
+body{
+  background-color: black;
 }
 
 /*

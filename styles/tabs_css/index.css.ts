@@ -1,20 +1,14 @@
-import { unsafeCSS, css } from "lit";
-import backbeige from "../assets/img/beige-paper.png";
+import { css } from "lit";
+import "../assets/img/beige-paper.png";
 
 export default css`
-  :root {
-    --dark: #282b28;
-    --dark-green: #3e5641;
-    --dark-brown: #a24936;
-    --dark-orange: #d36135;
-    --dark-lightblue: #83bca9;
-  }
-  .container {
-    box-sizing: border-box;
-    font-family: voxabular-font;
-    background-color: #282b28;
+  @import url("../variables.css");
+
+  .container { 
+    font-family: voxabular-font; 
     padding: 1em;
     border-radius: 8px;
+    width: 80vw;
   }
   button {
     font-family: voxabular-font;
@@ -32,7 +26,7 @@ export default css`
   .content-tabs {
   }
   .tabs {
-    background: url(${unsafeCSS(backbeige)}), hsl(15, 0%, 90%);
+    background: url("./beige-paper.png"), hsl(15, 0%, 95%);
   }
   .active-tabs {
     box-shadow: 0px -2px 5px 3px white; /** shine */

@@ -1,4 +1,4 @@
-import { LitElement, html  } from "lit";
+import { LitElement, html } from "lit";
 import { customElement } from "lit/decorators.js";
 import style from "../../styles/tabs_css/suscribe.css";
 
@@ -9,16 +9,16 @@ export class Suscribe extends LitElement {
   render() {
     return html`
       <div class="suscribe-container">
-        <h1>Thank you for suscribe!🖤</h1>
-        <div class="contact">
-          <label class="lbl">Keep updated:</label>
-          <input class="input" type="email" placeholder="Your email here :)" />
+        <div class="suscribe__title">Thank you for suscribe!🖤</div>
+        <div class="suscribe__contact">
+          <div class="suscribe__contact-lbl">Keep updated:</div>
+          <input class="suscribe__input" type="email" placeholder="Your email here :)" />
         </div>
 
-        <div class="anchors">
+        <div class="suscribe__anchors">
           <div>To make sure you get our messages</div>
           <a>Please add us to your address book</a>
-          <a>Manage my subscription</a>
+          <a>Manage my subscription 📩</a>
         </div>
       </div>
     `;

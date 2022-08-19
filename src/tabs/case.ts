@@ -23,8 +23,8 @@ export class Case extends LitElement {
 
     return html`
       <div class="case-container">
-        <h1 class="title-case">${this.titleCase}</h1>
-        <div class="list-items">${map(this._todos, li_template)}</div>
+        <h1 class="case__title">${this.titleCase}</h1>
+        <div class="case__list">${map(this._todos, li_template)}</div>
       </div>
     `;
   }
