@@ -1,6 +1,7 @@
 import { LitElement, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import style from "../../styles/tabs_css/model-sheet.css";
+import style from "../styles/tabs_css/model-sheet.scss";
+import "../assets/img/beige-paper.png";
 
 @customElement("model-sheet")
 export class ModelSheet extends LitElement {

@@ -1,0 +1,42 @@
+@import url("./normalize.css");
+
+@font-face {
+  font-family: voxabular-font;
+  src: url("../assets/fonts/BohemianTypewriter.ttf");
+}
+:root {
+  --fs-200: clamp(0.66rem, 0.83rem - 0.24vw, 0.78rem);
+  --fs-300: clamp(1rem, 0.94rem - 0.02vw, 1.125rem);
+  --fs-400: clamp(1.13rem, 1.05rem + 0.37vw, 1.31rem);
+  --fs-500: clamp(1.35rem, 1.15rem + 0.99vw, 1.86rem);
+  --fs-600: clamp(1.62rem, 1.23rem + 1.96vw, 2.62rem);
+  --fs-700: clamp(1.94rem, 1.25rem + 3.45vw, 3.71rem);
+  --fs-800: clamp(2.33rem, 1.2rem + 5.69vw, 5.25rem);
+  --fs-900: clamp(2.8rem, 1rem + 9.01vw, 7.42rem);
+  /* palette */
+  --dark: #282b28;
+  --dark-green: #3e5641;
+  --dark-brown: #a24936;
+  --dark-orange: #d36135;
+  --dark-lightblue: #83bca9;
+
+  --danger: rgb(230, 20, 20);
+  --alert: tomato;
+
+  --large: clamp(2rem, 4vw, 8rem);
+  --large-medium: clamp(1rem, 2vw, 4rem);
+  --medium: clamp(0.5rem, 1.7vw, 3rem);
+  --small: clamp(0.2rem, 1.5vw, 3rem);
+  --extra-small: 0.7rem;
+}
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+/*
+//https://coolors.co/palette/220901-621708-941b0c-bc3908-f6aa1c
+//https://coolors.co/palette/335c67-fff3b0-e09f3e-9e2a2b-540b0e
+//https://coolors.co/palette/f2c57c-ddae7e-7fb685-426a5a-ef6f6c
+*/

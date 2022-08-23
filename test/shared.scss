@@ -1,0 +1,23 @@
+/*  Important all variables in Host !  */
+:host {
+  --fs-color: red;
+  /*
+    This type of sass variables doesn't work 
+    $variable: #3342af;
+    $variable1: 1px solid red;
+  */
+}
+
+/* General styles rules */
+li {
+  list-style-type: none;
+}
+
+/* classes works fine*/
+.shared {
+  border: 3px dotted black;
+  font-size: 2rem;
+  background-color: lightblue;
+}
+
+/* CamelCase in classes works very gooood : .myclass !== myClass  */

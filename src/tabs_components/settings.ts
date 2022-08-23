@@ -1,7 +1,7 @@
 import { LitElement, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import hints from "../../styles/assets/img/hints.png";
-import style from "../../styles/tabs_css/settings.css";
+import style from "../styles/tabs_css/settings.scss";
+import "../assets/img/hints.png";
 
 @customElement("settings-tab")
 export class Settings extends LitElement {
@@ -22,7 +22,7 @@ export class Settings extends LitElement {
         </div>
         <div class="settings__user">User:${this.userid}</div>
         <span class="settings__hints">
-          <img class="settings__hints-img" src=${hints} />
+          <img class="settings__hints-img" src="./assets/hints.png" />
         </span>
         <div class="settings__volume">
           <div>Music Volume</div>

@@ -1,6 +1,6 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist/",
+  "compilerOptions": { 
+    "outDir": "./docs/",
     "experimentalDecorators":true,
     "noImplicitAny": true,
     "module": "ES2020",

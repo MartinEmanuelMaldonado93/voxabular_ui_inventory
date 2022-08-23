@@ -1,7 +1,7 @@
 import { LitElement, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { map } from "lit/directives/map.js";
-import  style  from "../../styles/tabs_css/case.css";
+import  style  from "../styles/tabs_css/case.scss";
 
 @customElement("case-tab")
 export class Case extends LitElement {

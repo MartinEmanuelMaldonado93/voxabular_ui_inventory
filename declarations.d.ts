@@ -1,15 +1,13 @@
 declare module "*.scss" {
-  import { CSSResult } from "lit";
-  const css: CSSResult;
-  export default css;
+  const scss: any;
+  export default scss;
 }
 declare module "*.css" {
-  import { CSSResult } from "lit";
-  const css: CSSResult;
+  const css: any;
   export default css;
 }
 declare module "*.png" {
-  const val: any;
-  export default val;
+  const png: any;
+  export default png;
 }
 declare module "*.ttf";

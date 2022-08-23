@@ -1,21 +1,24 @@
-import { LitElement, html, CSSResultGroup, css, unsafeCSS } from "lit";
-import { customElement, property, query, state } from "lit/decorators.js";
-import "../styles/main.css"; /* put main styles in the bundle*/
-import  style  from "../styles/tabs_css/index.css";
-import "./tabs/model-sheet";
-import "./tabs/_tabs-group";
+import { LitElement, html, CSSResultGroup } from "lit";
+import { customElement, state } from "lit/decorators.js";
+/* Styles */
+import "./styles/global.css";
+import style from "./styles/tabs_css/index.scss";
+/* Components */
+import "./tabs_components/_tabs-group";
 
-/* You can order the tabs from here */
+// You can order the tabs from here
 const tabTemplates = {
   case: html`<case-tab></case-tab>`,
   vocabulary: html`<vocabulary-tab></vocabulary-tab> `,
   settings: html`<settings-tab></settings-tab> `,
   // leads: html`<leads-tab></leads-tab>`,
   suscribe: html`<suscribe-tab></suscribe-tab>`,
-}; 
-const nameTabs = Object.keys(tabTemplates) as tabType[]; /* Array of tab names */
+};
+const nameTabs = Object.keys(
+  tabTemplates
+) as tabType[]; // Cast to Array of tab names
 
-type tabType = "case" | "vocabulary" | "suscribe" | "settings"  ;
+type tabType = "case" | "vocabulary" | "suscribe" | "settings";
 
 @customElement("lit-notebook")
 export class LitNotebook extends LitElement {
@@ -32,7 +35,8 @@ export class LitNotebook extends LitElement {
     const toTemplateBtns = (t: tabType) =>
       html`<button
         class=${this.tabSelected === t ? "active-tabs" : "tabs"}
-        @click=${() => this.setTabState(t)} >
+        @click=${() => this.setTabState(t)}
+      >
         ${t}
       </button>`;
 
