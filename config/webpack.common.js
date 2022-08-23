@@ -26,7 +26,17 @@ module.exports = {
       },
       {
         test: /\.scss$/i,
-        use: ["lit-css-loader", "postcss-loader", "sass-loader"],
+        use: [
+          "lit-css-loader",
+          "postcss-loader",
+          { loader: "resolve-url-loader" },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true, // <-- !!IMPORTANT!!
+            },
+          },
+        ],
       },
       {
         test: /\.(png|svg|jpg|gif|jpeg)$/i,

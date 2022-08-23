@@ -1,14 +1,3 @@
-@media screen and (max-width: 391px) {
-  .card-container {
-    flex-wrap: wrap;
-    place-content: center;
-    border: 1px solid red;
-  }
-  .card {
-    border: 1px solid pink;
-  }
-}
-
 .vocabulary-container {
   /* border: 1px solid green; */
   display: flex;
@@ -18,7 +7,7 @@
 }
 .vocabulary__sign h1 {
   text-align: center;
-  font-size: var(--large);
+  font-size: var(--fs-700);
   margin: 0;
   color: rgb(230, 20, 20);
   text-shadow: 2px 2px 1px black;
@@ -26,11 +15,11 @@
 .vocabulary__sign li {
   text-align: center;
   list-style: none;
-  font-size: var(--large-medium);
+  font-size: var(--fs-300);
 }
 .vocabulary__cards-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   user-select: none;
 }
 .c-1 {
@@ -83,4 +72,15 @@
 .card__footer-expresion {
   /* border:1px solid red; */
   font-size: var(--extra-small);
+}
+@media screen and (max-width: 600px) {
+  .vocabulary__cards-container { 
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  @for $i from 1 to 4 {
+    .c-#{$i} {
+      transform: translate(0px) rotate(6deg);
+    }
+  }
 }

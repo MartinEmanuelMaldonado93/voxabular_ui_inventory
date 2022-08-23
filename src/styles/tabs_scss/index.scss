@@ -20,6 +20,7 @@ button {
 // .content-tabs {
 // }
 .tabs {
+  /* imports are relative to bundle (must be include original path in component)*/
   background: url("./assets/beige-paper.png"), hsl(15, 0%, 95%);
 }
 .active-tabs {

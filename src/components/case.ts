@@ -1,7 +1,8 @@
 import { LitElement, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { map } from "lit/directives/map.js";
-import  style  from "../styles/tabs_css/case.scss";
+import style from "../styles/tabs_scss/case.scss";
+import "../assets/img/inkstain.png";
 
 @customElement("case-tab")
 export class Case extends LitElement {
@@ -25,6 +26,9 @@ export class Case extends LitElement {
       <div class="case-container">
         <h1 class="case__title">${this.titleCase}</h1>
         <div class="case__list">${map(this._todos, li_template)}</div>
+        <div class="case__img-container"> 
+          <img class="case__img-ink" src="./assets/inkstain.png" />
+        </div>
       </div>
     `;
   }

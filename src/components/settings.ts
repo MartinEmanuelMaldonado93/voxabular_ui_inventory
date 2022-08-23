@@ -1,6 +1,6 @@
 import { LitElement, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import style from "../styles/tabs_css/settings.scss";
+import style from "../styles/tabs_scss/settings.scss";
 import "../assets/img/hints.png";
 
 @customElement("settings-tab")
@@ -12,7 +12,7 @@ export class Settings extends LitElement {
 
   render() {
     return html`
-      <div class="settings-container">
+      <div class="settings-container"> 
         <div class="settings__title">Change language</div>
         <div class="settings__buttons-container">
           <button>Hablo español y quiero hablar inglés</button>
@@ -20,7 +20,7 @@ export class Settings extends LitElement {
           <button>Sólo quiero jugar en Español</button>
           <button>I just want to play in English</button>
         </div>
-        <div class="settings__user">User:${this.userid}</div>
+       
         <span class="settings__hints">
           <img class="settings__hints-img" src="./assets/hints.png" />
         </span>
@@ -31,6 +31,7 @@ export class Settings extends LitElement {
         <div class="erase-footer">
           <button>Erase and Restart</button>
         </div>
+        <span class="settings__user">User:${this.userid}</span>
       </div>
     `;
   }

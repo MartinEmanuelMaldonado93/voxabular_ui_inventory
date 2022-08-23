@@ -1,6 +1,6 @@
 import { LitElement, html } from "lit";
 import { customElement } from "lit/decorators.js";
-import style from "../styles/tabs_css/suscribe.scss";
+import style from "../styles/tabs_scss/suscribe.scss";
 
 @customElement("suscribe-tab")
 export class Suscribe extends LitElement {

@@ -2,7 +2,7 @@ import { LitElement, html, CSSResultGroup } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { map } from "lit/directives/map.js";
 import "../assets/img/vox.png";
-import style from "../styles/tabs_css/vocabulary.scss";
+import style from "../styles/tabs_scss/vocabulary.scss";
 
 @customElement("vocabulary-tab")
 export class Vocabulary extends LitElement {

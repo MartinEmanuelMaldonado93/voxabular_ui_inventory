@@ -1,25 +1,26 @@
-
-.suscribe-container {
+.suscribe-container { 
   display: flex;
   flex-direction: column;
   place-content: center;
   height: 100%;
-  gap: 2rem;
+  gap: var(--large-medium);
 }
-.suscribe__title {
-  align-self: center;
+.suscribe__title { 
+  text-align: center;
+  word-wrap: break-word;
   font-size: var(--large);
 }
 .suscribe__contact {
   align-self: center;
 }
 .suscribe__contact-lbl {
-  font-size: var(--medium);
-  margin: 2rem;
+  text-align: center;
+  font-size: var(--fs-500);
+  margin: var(--medium);
 }
 .suscribe__input {
   font-family: voxabular-font;
-  font-size: var(--medium);
+  font-size: var(--fs-400);
   border-radius: 3px;
   border: none;
   padding: 0.5rem;
@@ -43,5 +44,16 @@
   box-shadow: 0px 0px 8px 6px orange;
 }
 .suscribe__anchors {
-  font-size: var(--medium);
+  text-align: center;
+  font-size: var(--fs-400);
+}
+
+@media screen and (max-width: 280px) {
+  .suscribe__title {
+    word-wrap: break-word;
+    font-size: var(--fs-500);
+  }
+  * {
+    padding: 0 2rem;
+  }
 }

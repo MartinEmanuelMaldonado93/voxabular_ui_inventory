@@ -2,9 +2,9 @@ import { LitElement, html, CSSResultGroup } from "lit";
 import { customElement, state } from "lit/decorators.js";
 /* Styles */
 import "./styles/global.css";
-import style from "./styles/tabs_css/index.scss";
+import style from "./styles/tabs_scss/index.scss";
 /* Components */
-import "./tabs_components/_tabs-group";
+import "./components/_tabs-group";
 
 // You can order the tabs from here
 const tabTemplates = {
@@ -14,9 +14,7 @@ const tabTemplates = {
   // leads: html`<leads-tab></leads-tab>`,
   suscribe: html`<suscribe-tab></suscribe-tab>`,
 };
-const nameTabs = Object.keys(
-  tabTemplates
-) as tabType[]; // Cast to Array of tab names
+const nameTabs = Object.keys(tabTemplates) as tabType[]; // Cast to Array of tab names
 
 type tabType = "case" | "vocabulary" | "suscribe" | "settings";
 
