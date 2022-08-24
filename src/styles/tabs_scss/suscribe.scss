@@ -1,4 +1,4 @@
-.suscribe-container { 
+.suscribe { 
   display: flex;
   flex-direction: column;
   place-content: center;
@@ -48,6 +48,24 @@
   font-size: var(--fs-400);
 }
 
+/* HEIGHT 
+* When the keyboard is activated on small devices */
+@media (max-height: 200px) {
+  .suscribe {
+    &__title,
+    &__anchors {
+      display: none;
+    }
+    
+    &__contact {
+      &-lbl {
+        display: none;
+      }
+    }
+  }
+
+}
+/* WIDTH */
 @media screen and (max-width: 280px) {
   .suscribe__title {
     word-wrap: break-word;

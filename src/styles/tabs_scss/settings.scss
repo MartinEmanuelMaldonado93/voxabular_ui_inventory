@@ -1,22 +1,39 @@
-.settings-container {
+.settings {
   display: flex;
   flex-direction: column;
   height: 100%;
   place-content: center;
   gap: var(--medium);
-}
-.settings__title {
-  text-align: center;
-  font-size: var(--large);
-}
-.settings__user {
-  font-size: var(--fs-300);
-}
-.settings__buttons-container {
-  display: flex;
-  flex-direction: column;
-  align-items: space-between;
-  gap: clamp(0.1rem, 1.5vh, 3rem);
+
+  &__title {
+    text-align: center;
+    font-size: var(--large);
+  }
+  &__user {
+    font-size: var(--fs-300);
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    gap: clamp(0.1rem, 1.5vh, 3rem);
+  }
+  &__hints {
+    position: absolute;
+    z-index: 2;
+    height: 0;
+    & img {
+      max-width: 15rem;
+      transform: translateX(-14rem) rotateZ(-100deg);
+    }
+  }
+  &__volume {
+    align-self: center;
+    margin-bottom: 0.5rem;
+  }
+  &__erase-footer button:hover {
+    background-color: var(--alert);
+  }
 }
 button {
   display: block;
@@ -33,25 +50,13 @@ button:active {
   box-shadow: 0 0px 4px 4px white;
   transform: translateY(1px);
 }
-.settings__hints {
-  position: absolute;
-  z-index: 2;
-  height: 0;
-}
-.settings__hints-img {
-  max-width: 15rem;
-  transform: translateX(-14rem) rotateZ(-100deg);
-}
-.settings__volume {
-  align-self: center;
-  margin-bottom: 0.5rem;
-}
-input[type="range"],
-input[type="range"]::-webkit-slider-runnable-track,
-input[type="range"]::-webkit-slider-thumb {
+
+.volume__range,
+.volume__range::-webkit-slider-runnable-track,
+.volume__range::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
-input[type="range"]::-webkit-slider-thumb {
+.volume__range::-webkit-slider-thumb {
   background-color: #777;
   width: 30px;
   height: 30px;
@@ -59,14 +64,29 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 50%;
   margin-top: -9px;
 }
-input[type="range"]::-webkit-slider-runnable-track {
+.volume__range::-webkit-slider-runnable-track {
   height: 5px;
   background-color: black;
 }
-// .erase-footer {
-// border: 1px solid red;
-/* margin-top: 0.5rem; */
-// }
-.erase-footer button:hover {
-  background-color: var(--alert);
+
+@media (max-height: 400px) {
+  button {
+    font-size: var(--fs-300);
+  }
+  .settings {
+    &__user {
+      display: none;
+    }
+    &__title {
+      display: none;
+    }
+    &__volume {
+      margin: 0;
+    }
+    .volume__range::-webkit-slider-thumb {
+      width: 20px;
+      height: 20px;
+      margin-top: -4px;
+    }
+  }
 }

@@ -23,7 +23,7 @@ export class LitNotebook extends LitElement {
   static override styles: CSSResultGroup | undefined = [style];
 
   @state()
-  tabSelected: tabType = "settings";
+  tabSelected: tabType = "vocabulary";
 
   setTabState(tab: tabType) {
     this.tabSelected = tab;
@@ -39,8 +39,8 @@ export class LitNotebook extends LitElement {
       </button>`;
 
     return html`
-      <div class="container">
-        <div class="button-tabs">${nameTabs.map(toTemplateBtns)}</div>
+      <div class="index">
+        <div class="index__tabs">${nameTabs.map(toTemplateBtns)}</div>
         <model-sheet> ${tabTemplates[this.tabSelected]} </model-sheet>
       </div>
     `;

@@ -8,7 +8,7 @@ export class Suscribe extends LitElement {
 
   render() {
     return html`
-      <div class="suscribe-container">
+      <div class="suscribe">
         <div class="suscribe__title">Thank you for suscribe!🖤</div>
         <div class="suscribe__contact">
           <div class="suscribe__contact-lbl">Keep updated:</div>

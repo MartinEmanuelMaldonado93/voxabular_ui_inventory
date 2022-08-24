@@ -17,10 +17,10 @@ export class Vocabulary extends LitElement {
       html`<li class="li-template">${el}</li>`;
 
     return html`
-      <div class="vocabulary-container">
+      <div class="vocabulary">
         <div class="vocabulary__sign">
           <h1>A Countryside Drive</h1>
-          <div class="list-items">${map(this._todos, toLiTemplate)}</div>
+          <div class="sign__li">${map(this._todos, toLiTemplate)}</div>
         </div>
         <div class="vocabulary__cards-container">
           <card-element class="c-1" titlecard="Exit the car"></card-element>

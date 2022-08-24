@@ -1,26 +1,26 @@
-.container {
+.index {
   font-family: voxabular-font;
   padding: 1em;
   border-radius: 8px;
   width: 80vw;
+  &__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: var(--fs-300);
+    button {
+      font-family: voxabular-font;
+      font-size: var(--fs-300);
+      padding: 0 10px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      border: 1px solid lightgray;
+      border-bottom: none;
+    }
+  }
 }
-button {
-  font-family: voxabular-font;
-  font-size: 1.5rem;
-  padding: 0 10px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border: 1px solid lightgray;
-  border-bottom: none;
-}
-.button-tabs {
-  display: flex;
-  flex-wrap: wrap;
-}
-// .content-tabs {
-// }
+
+
 .tabs {
-  /* imports are relative to bundle (must be include original path in component)*/
   background: url("./assets/beige-paper.png"), hsl(15, 0%, 95%);
 }
 .active-tabs {
