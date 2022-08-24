@@ -34,7 +34,7 @@
   &__erase-footer button:hover {
     background-color: var(--alert);
   }
-  @media (max-height:150px) {
+  @media (max-height: 150px) {
     & {
       display: none;
     }
@@ -73,7 +73,19 @@ button:active {
   height: 5px;
   background-color: black;
 }
-
+@media (max-width: 300px) {
+  .settings {
+    &__user {
+      display: none;
+    }
+    &__title {
+      display: none;
+    }
+    &__volume {
+      display: none;
+    }
+  }
+}
 @media (max-height: 400px) {
   button {
     font-size: var(--fs-300);

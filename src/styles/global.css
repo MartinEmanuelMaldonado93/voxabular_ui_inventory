@@ -5,6 +5,7 @@
   src: url("../assets/fonts/BohemianTypewriter.ttf");
 }
 :root {
+  font-size: 16px;
   --fs-200: clamp(0.66rem, 0.83rem - 0.24vw, 0.78rem);
   --fs-300: clamp(1rem, 0.94rem - 0.02vw, 1.125rem);
   --fs-400: clamp(1.13rem, 1.05rem + 0.37vw, 1.31rem);
