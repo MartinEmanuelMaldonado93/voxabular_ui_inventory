@@ -65,16 +65,16 @@
   &__footer {
     box-sizing: border-box;
   }
-}
-.card__footer p {
-  margin: clamp(0.1rem, 0.2rem, 1rem);
-}
-.card__footer-title {
-  border-bottom: 2px solid gray;
-  font-size: var(--medium);
-}
-.card__footer-expresion {
-  font-size: var(--extra-small);
+  &__footer p {
+    margin: clamp(0.1rem, 0.2rem, 1rem);
+  }
+  &__footer-title {
+    border-bottom: 2px solid gray;
+    font-size: var(--medium);
+  }
+  &__footer-expresion {
+    font-size: var(--extra-small);
+  }
 }
 @media screen and (max-width: 600px) {
   .vocabulary__cards-container {
@@ -95,11 +95,9 @@
     }
   }
 }
-
-@media (max-height: 300px) {
+/* when keyboard is activated*/
+@media (max-height: 200px) {
   .vocabulary {
-    &__sign h1 {
-      display: none;
-    }
+    display: none;
   }
 }

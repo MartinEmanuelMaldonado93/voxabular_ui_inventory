@@ -34,6 +34,11 @@
   &__erase-footer button:hover {
     background-color: var(--alert);
   }
+  @media (max-height:150px) {
+    & {
+      display: none;
+    }
+  }
 }
 button {
   display: block;
@@ -81,7 +86,7 @@ button:active {
       display: none;
     }
     &__volume {
-      margin: 0;
+      display: none;
     }
     .volume__range::-webkit-slider-thumb {
       width: 20px;

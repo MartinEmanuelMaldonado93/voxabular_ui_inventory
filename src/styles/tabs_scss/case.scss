@@ -27,11 +27,18 @@
     height: calc(var(--large) + 6vw );
   }
 }
+@media (max-height: 200px){
+  .case__list { display: none;}
+}
+@media (max-height: 300px){
+  .case{
+    &__title {
+      display: none;
+    }
+  }  
+}
 
 li::before {
   content: "(X)  ";
   color: rgb(230, 20, 20);
-}
-.list-items {
-  text-align: center;
 }
