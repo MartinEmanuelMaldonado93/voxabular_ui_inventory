@@ -1,3 +1,5 @@
+@use "shared" as Shared;
+
 .vocabulary {
   display: flex;
   flex-direction: column;
@@ -76,7 +78,8 @@
     font-size: var(--extra-small);
   }
 }
-@media screen and (max-width: 600px) {
+
+@media (max-width: Shared.$w-600) {
   .vocabulary__cards-container {
     justify-content: space-around;
     flex-wrap: wrap;
@@ -87,8 +90,7 @@
     }
   }
 }
-
-@media (max-height: 400px) {
+@media (max-height: Shared.$h-400) {
   .vocabulary__sign {
     .sign__li {
       column-count: 2;
@@ -96,7 +98,7 @@
   }
 }
 /* when keyboard is activated*/
-@media (max-height: 200px) {
+@media (max-height: Shared.$h-200) {
   .vocabulary {
     display: none;
   }

@@ -1,3 +1,5 @@
+@use "shared" as Shared;
+
 .settings {
   display: flex;
   flex-direction: column;
@@ -86,7 +88,7 @@ button:active {
     }
   }
 }
-@media (max-height: 400px) {
+@media (max-height: Shared.$h-400) {
   button {
     font-size: var(--fs-300);
   }
