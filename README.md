@@ -143,11 +143,5 @@ import { customElement, property } from "lit/decorators.js";
 import styles from "../styles/styleOfMyComponent.ts;
 
 ```
-..... that's it ! ```
-import { LitElement, html } from "lit";
-import { customElement, property } from "lit/decorators.js";
-import styles from "../styles/styleOfMyComponent.ts;
-
-```
 ..... that's it ! ✅
 
