@@ -75,10 +75,10 @@
     font-size: var(--medium);
   }
   &__footer-expresion {
-    font-size: var(--extra-small);
+    font-size: var(--small);
   }
 }
-
+/* WIDTH */
 @media (max-width: Shared.$w-600) {
   .vocabulary__cards-container {
     justify-content: space-around;
@@ -90,6 +90,12 @@
     }
   }
 }
+@media (max-width: Shared.$w-400) {
+  .vocabulary__cards-container {
+    gap: 1rem;
+  }
+}
+/* HEIGHT */
 @media (max-height: Shared.$h-400) {
   .vocabulary__sign {
     .sign__li {
@@ -97,9 +103,12 @@
     }
   }
 }
-/* when keyboard is activated*/
-@media (max-height: Shared.$h-200) {
-  .vocabulary {
+// when keyboard is activated
+@media (max-height: Shared.$h-300) {
+  .vocabulary__sign {
     display: none;
+  }
+  .vocabulary__cards-container {
+    gap: 0;
   }
 }

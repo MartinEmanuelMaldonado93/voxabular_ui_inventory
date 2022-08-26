@@ -43,6 +43,7 @@
   }
 }
 button {
+  user-select: none;
   display: block;
   font-family: voxabular-font;
   font-size: var(--fs-400);

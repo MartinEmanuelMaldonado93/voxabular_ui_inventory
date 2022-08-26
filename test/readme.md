@@ -1,1 +1,0 @@
-# change the entry in config/webpack.common.js 

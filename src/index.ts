@@ -5,7 +5,8 @@ import "./styles/global.css";
 import style from "./styles/tabs_scss/index.scss";
 /* Components */
 import "./components/_tabs-group";
-
+const third = document.getElementById("third");
+third?.style.font
 // You can order the tabs from here
 const tabTemplates = {
   case: html`<case-tab></case-tab>`,
@@ -23,7 +24,7 @@ export class LitNotebook extends LitElement {
   static override styles: CSSResultGroup | undefined = [style];
 
   @state()
-  tabSelected: tabType = "suscribe";
+  tabSelected: tabType = "vocabulary";
 
   setTabState(tab: tabType) {
     this.tabSelected = tab;
